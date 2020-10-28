@@ -1,0 +1,21 @@
+Instructions for downloading a single song/mp3 from archive.org:
+
+1. On archive.org/... where the show is that you want to download (i.e. the page you would play music from), right click anywhere and "inspect element."
+2. Search for the string "mp3" (perhpas one day mp4?) to find the URL to the first song that looks something like the following
+https://archive.org/download/gd76-07-17.sbd.unknown.243.sbeok.shnf/gd76-07-17d1t01.mp3
+
+2b. I had to install the homebrew version of 'wget' since curl alone was not working to download .mp3 files
+  brew install wget
+  
+2c. Went to developer.apple.com to download the latest stable version of Xcode for Mojave (11.3.1), as well as the respective version of Command Line 
+Tools for Xcode
+2d. Also, had to update Xcode from 10 to 11.3, and similarly Command Line Tools for Xcode
+  rm -rf /Library/Developer/CommandLineTools
+  
+3. Next you must download the mp3 linked to the URL, by using using the curl command in the terminal:
+  curl https://archive.org/download/gd76-07-17.sbd.unknown.243.sbeok.shnf/gd76-07-17d1t01.mp3
+
+***or try:
+  curl [URL] -o [outfile]
+    This created and empty outfile in the directory it ran...
+
